@@ -1,0 +1,49 @@
+---
+import Image from "astro/components/Image.astro";
+import Badge from "./Badge.astro";
+import LinkedIn from "./icons/LinkedInIcon.astro";
+import GitHub from "./icons/GitHubIcon.astro";
+import SocialPill from "./SocialPill.astro";
+import GmailIcon from "./icons/GmailIcon.astro";
+import SectionContainer from "./SectionContainer.astro";
+---
+
+<SectionContainer id="top" class="pt-44 pb-24">
+ <main>
+  <Image
+   class="rounded-full mb-4"
+   src="https://avatars.githubusercontent.com/u/115676740?v=4"
+   alt="Site Logo"
+   width={120}
+   height={120}
+   class="logo"
+  />
+  <h1 class="text-5xl font-bold mb-4 text-white flex flex-row gap-x-4 pb-10">
+   Hola, Soy Sergio
+   <a
+    class="flex justify-center items-center"
+    href="https://www.linkedin.com/in/sergioalfarogiron/"
+    target="_blank"
+   >
+    <Badge>Disponible para Trabajar</Badge>
+   </a>
+  </h1>
+  <h2 class="text-2xl opacity-80 text-wrap">
+   Programador Web Junior. <span class="text-primary/90">
+    De Albacete, España</span
+   >
+  </h2>
+
+  <nav class="flex gap-x-2 mt-4">
+   <SocialPill href="https://github.com/SergioAG21">
+    <GitHub class="size-6" />GitHub
+   </SocialPill>
+   <SocialPill href="https://www.linkedin.com/in/sergioalfarogiron/">
+    <LinkedIn class="size-6" />LinkedIn
+   </SocialPill>
+   <SocialPill href="mailto:sergiogiron44@gmail.com">
+    <GmailIcon class="size-6" />Contáctame
+   </SocialPill>
+  </nav>
+ </main>
+</SectionContainer>

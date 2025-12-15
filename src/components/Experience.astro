@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import Briefcase from "./icons/Briefcase.astro";
+import SectionContainer from "./SectionContainer.astro";
+
+const EXPERIENCE = [
+ {
+  position: "Desarrollador Web Junior",
+  company: "Serbatic",
+  duration: "Septiembre 2025 - Diciembre 2025",
+  description:
+   "Desarrollé y mantuve sitios web utilizando HTML, CSS y JavaScript. Colaboré con el equipo de diseño para implementar interfaces de usuario atractivas y funcionales.",
+  tecnologies: ["Angular", "SpringBoot"],
+ },
+];
+---
+
+<SectionContainer id="experience">
+ <h2
+  class="text-4xl font-semibold text-primary/90 mb-6 flex gap-x-3 items-center"
+ >
+  <Briefcase class="size-7 text-white" />
+  Experiencia Laboral
+ </h2>
+ <ol class="relative border-s border-default">
+  {
+   EXPERIENCE.map((experience) => (
+    <li class="mb-10 ms-4">
+     <ExperienceItem {...experience} />
+    </li>
+   ))
+  }
+ </ol>
+</SectionContainer>
