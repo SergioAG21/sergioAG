@@ -6,43 +6,55 @@ import GitHub from "./icons/GitHubIcon.astro";
 import SocialPill from "./SocialPill.astro";
 import GmailIcon from "./icons/GmailIcon.astro";
 import SectionContainer from "./SectionContainer.astro";
+import DocumentIcon from "./icons/DocumentIcon.astro";
 ---
 
 <SectionContainer id="top" class="pt-44 pb-24">
  <main>
-  <Image
-   class="rounded-full mb-4"
-   src="https://avatars.githubusercontent.com/u/115676740?v=4"
-   alt="Site Logo"
-   width={120}
-   height={120}
-   class="logo"
-  />
-  <h1 class="text-5xl font-bold mb-4 text-white flex flex-row gap-x-4 pb-10">
+  <div class="w-full mx-auto justify-center items-center flex flex-col gap-2">
+   <Image
+    class="rounded-full mb-2 mx-auto flex justify-center items-center"
+    src="https://avatars.githubusercontent.com/u/115676740?v=4"
+    alt="Site Logo"
+    width={150}
+    height={150}
+    class="logo"
+   />
+   <Badge>Disponible para Trabajar</Badge>
+  </div>
+
+  <h1
+   class="mt-4 text-3xl lg:text-5xl md:text-4xl font-bold mb-4 text-white flex flex-row gap-x-4 pb-6 lg:pb-10"
+  >
    Hola, Soy Sergio
    <a
     class="flex justify-center items-center"
     href="https://www.linkedin.com/in/sergioalfarogiron/"
     target="_blank"
    >
-    <Badge>Disponible para Trabajar</Badge>
    </a>
   </h1>
-  <h2 class="text-2xl opacity-80 text-wrap">
+  <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-2xl">
    Programador Web Junior. <span class="text-primary/90">
     De Albacete, España</span
    >
   </h2>
 
-  <nav class="flex gap-x-2 mt-4">
-   <SocialPill href="https://github.com/SergioAG21">
-    <GitHub class="size-6" />GitHub
+  <nav class="flex gap-4 mt-4 flex-wrap">
+   <SocialPill
+    href="/sergioag_cv.pdf"
+    download="SergioAG - Web Developer CV.pdf"
+   >
+    <DocumentIcon class="size-2 md:size-4" />Descargar CV
    </SocialPill>
    <SocialPill href="https://www.linkedin.com/in/sergioalfarogiron/">
-    <LinkedIn class="size-6" />LinkedIn
+    <LinkedIn class="size-2 md:size-4" />LinkedIn
+   </SocialPill>
+   <SocialPill href="https://github.com/SergioAG21">
+    <GitHub class="size-2 md:size-4" />GitHub
    </SocialPill>
    <SocialPill href="mailto:sergiogiron44@gmail.com">
-    <GmailIcon class="size-6" />Contáctame
+    <GmailIcon class="size-2 md:size-4" />Contáctame
    </SocialPill>
   </nav>
  </main>

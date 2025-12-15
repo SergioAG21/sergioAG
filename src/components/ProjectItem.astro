@@ -1,0 +1,50 @@
+---
+interface Props {
+ title: string;
+ description: string;
+ technologies: any[];
+ link?: string;
+ image?: string;
+ github?: string;
+}
+
+const { title, description, technologies, link, image, github } = Astro.props;
+---
+
+<article class="flex flex-col md:flex-row gap-6 mb-12">
+ <div class="w-full md:w-2/3">
+  <h3 class="text-2xl font-semibold text-secondary/90">{title}</h3>
+  <p class="font-normal mb-4 text-pretty">{description}</p>
+  <div class="mt-4 flex flex-wrap gap-4">
+   {
+    link && (
+     <a
+      href={github}
+      target="_blank"
+      class="px-4 py-2 bg-primary text-white rounded hover:bg-primary/90 transition"
+     >
+      Ver Proyecto
+     </a>
+    )
+   }
+  </div>
+  <ul>
+   {
+    technologies.map((tech) => (
+     <li
+      class={`inline-flex items-center mr-2 mb-2 px-2 py-1 text-sm font-medium rounded ${tech.class}`}
+     >
+      {tech.icon && <tech.icon class="size-4 me-1 inline-block" />}
+      {tech.name}
+     </li>
+    ))
+   }
+  </ul>
+
+  <img
+   class="w-full md:w-1/3 rounded shadow-2xl dark:shadow-white/10 shadow-black/10"
+   src={image}
+   alt={`Captura de Pantalla del proyecto ${title}`}
+  />
+ </div>
+</article>

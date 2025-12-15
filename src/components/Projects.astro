@@ -1,0 +1,24 @@
+---
+import { PROJECTS } from "../data/projects.js";
+import SectionContainer from "./SectionContainer.astro";
+import CodeIcon from "./icons/CodeIcon.astro";
+import ProjectItem from "./ProjectItem.astro";
+---
+
+<SectionContainer id="projects" class="pt-24">
+ <h2
+  class="text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-6 flex gap-x-3 items-center"
+ >
+  <CodeIcon class="size-7 text-white" />
+  Proyectos
+ </h2>
+ <ol class="relative border-s border-default ml-2.5">
+  {
+   PROJECTS.map((project) => (
+    <li class="mb-10 ms-4">
+     <ProjectItem {...project} />
+    </li>
+   ))
+  }
+ </ol>
+</SectionContainer>

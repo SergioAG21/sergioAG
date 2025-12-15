@@ -1,25 +1,32 @@
 ---
 interface Props {
- position: string;
- company: string;
+ title: string;
  duration: string;
  description: string;
- tecnologies: string[];
+ technologies: string[];
  link?: string;
 }
 
-const { position, company, duration, description, tecnologies, link } =
- Astro.props;
+const { title, duration, description, technologies, link } = Astro.props;
 ---
 
 <div
  class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"
 >
 </div>
-<time
- class="text-sm font-normal leading-none text-gray-800 dark:text-gray-300/80"
- >{duration}</time
->
+
+<h3 class="text-2xl font-semibold my-2 text-secondary/80 mt-2">
+ {title}
+</h3>
+
+<time class="text-sm font-normal leading-none text-sky-300/80"
+ >{duration}
+</time>
+
+<p class="mb-4 text-gray-800 dark:text-white font-normal text-balance">
+ {description}
+</p>
+
 {
  link && (
   <a
@@ -47,10 +54,9 @@ const { position, company, duration, description, tecnologies, link } =
   </a>
  )
 }
-<h3 class="text-lg font-semibold my-2 text-gray-800 dark:text-white">
- {position} en {company}
-</h3>
-<p class="mb-4 text-gray-800 dark:text-white font-normal">
- {description}
- {tecnologies.join(", ")}
-</p>
+
+{
+ technologies.map((tech) => {
+  <div>{tech}</div>;
+ })
+}
