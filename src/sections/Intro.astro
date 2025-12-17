@@ -1,12 +1,12 @@
 ---
 import Image from "astro/components/Image.astro";
-import Badge from "./Badge.astro";
-import LinkedIn from "./icons/LinkedInIcon.astro";
-import GitHub from "./icons/GitHubIcon.astro";
-import SocialPill from "./SocialPill.astro";
-import GmailIcon from "./icons/GmailIcon.astro";
-import SectionContainer from "./SectionContainer.astro";
-import DocumentIcon from "./icons/DocumentIcon.astro";
+import SectionContainer from "@components/SectionContainer.astro";
+import Badge from "@components/Badge.astro";
+import SocialPill from "@components/SocialPill.astro";
+import DocumentIcon from "@components/icons/DocumentIcon.astro";
+import LinkedInIcon from "@components/icons/LinkedInIcon.astro";
+import GitHubIcon from "@components/icons/GitHubIcon.astro";
+import GmailIcon from "@components/icons/GmailIcon.astro";
 ---
 
 <SectionContainer id="top" class="pt-44 pb-24">
@@ -24,7 +24,7 @@ import DocumentIcon from "./icons/DocumentIcon.astro";
   </div>
 
   <h1
-   class="mt-4 text-3xl lg:text-5xl md:text-4xl font-bold mb-4 text-white flex flex-row gap-x-4 pb-6 lg:pb-10"
+   class="mt-4 text-3xl lg:text-5xl md:text-4xl font-bold mb-4 dark:text-gray-200 text-gray-800 flex flex-row gap-x-4 pb-6 lg:pb-10"
   >
    Hola, Soy Sergio
    <a
@@ -48,10 +48,10 @@ import DocumentIcon from "./icons/DocumentIcon.astro";
     <DocumentIcon class="size-2 md:size-4" />Descargar CV
    </SocialPill>
    <SocialPill href="https://www.linkedin.com/in/sergioalfarogiron/">
-    <LinkedIn class="size-2 md:size-4" />LinkedIn
+    <LinkedInIcon class="size-2 md:size-4" />LinkedIn
    </SocialPill>
    <SocialPill href="https://github.com/SergioAG21">
-    <GitHub class="size-2 md:size-4" />GitHub
+    <GitHubIcon class="size-2 md:size-4" />GitHub
    </SocialPill>
    <SocialPill href="mailto:sergiogiron44@gmail.com">
     <GmailIcon class="size-2 md:size-4" />Contáctame

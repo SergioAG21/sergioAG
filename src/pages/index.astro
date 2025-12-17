@@ -1,10 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import "../assets/app.css";
-import Intro from "../components/Intro.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Projects.astro";
-import Education from "../components/Education.astro";
+import Layout from "@layouts/Layout.astro";
+import "@assets/app.css";
+import Intro from "@sections/Intro.astro";
+import Experience from "@sections/Experience.astro";
+import Projects from "@sections/Projects.astro";
+import Education from "@sections/Education.astro";
+import Extra from "@sections/Extra.astro";
 ---
 
 <Layout title="SergioAG | Desarrollador y Programador Web">
@@ -13,5 +14,6 @@ import Education from "../components/Education.astro";
   <Experience />
   <Projects />
   <Education />
+  <Extra />
  </main>
 </Layout>

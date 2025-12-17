@@ -30,11 +30,12 @@ export const PROJECTS = [
  {
   title: "CliniCare - Aplicación Web Full Stack",
   description: `
-   Este proyecto corresponde a mi Proyecto Final y consiste en una aplicación web full stack desarrollada con Angular en el frontend y Spring Boot en el backend. La aplicación implementa una arquitectura cliente–servidor siguiendo buenas prácticas de desarrollo, separación de responsabilidades y uso de tecnologías modernas.
+Aplicación web completa desarrollada como Proyecto Final, enfocada en una arquitectura sólida y una experiencia de usuario cuidada.
+El proyecto demuestra mi capacidad para diseñar soluciones estructuradas, aplicar buenas prácticas de desarrollo y gestionar un flujo de trabajo completo de manera profesional.
    `,
   link: "#",
   github: "https://github.com/SergioAG21/clinicare",
-  image: "/projects/clinicare.webp",
+  image: "/projects/clinicare/miniatura.png",
   technologies: [TAGS.ANGULAR, TAGS.SPRINGBOOT, TAGS.TAILWIND, TAGS.MYSQL],
  },
 ];
